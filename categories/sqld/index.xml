@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sqld on Komeethecat</title>
+    <link>https://Komeethecat.github.io/categories/sqld/</link>
+    <description>Recent content in Sqld on Komeethecat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 24 Mar 2019 19:16:17 +0900</lastBuildDate>
+    
+	<atom:link href="https://Komeethecat.github.io/categories/sqld/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test</title>
+      <link>https://Komeethecat.github.io/post/study/sqld/test/</link>
+      <pubDate>Sun, 24 Mar 2019 19:16:17 +0900</pubDate>
+      
+      <guid>https://Komeethecat.github.io/post/study/sqld/test/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;HUGO와 github을 이용하여 블로그 만들기&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
