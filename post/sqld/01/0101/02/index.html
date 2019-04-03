@@ -4,21 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Getting Started with Hugo - Komeethecat</title>
+	<title>엔터티 - Komeethecat</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.54.0" />
-	<meta property="og:title" content="Getting Started with Hugo" />
-<meta property="og:description" content="Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:" />
+	<meta property="og:title" content="엔터티" />
+<meta property="og:description" content="1. 엔터티의 개념  엔터티는 사람, 장소, 물건, 사건, 개념 등의 명사에 해당한다. 엔터티는 업무상 관리가 필요한 관심사에 해당한다. 엔터티는 저장이 되기 위한 어떤 것이다.  2. 엔터티와 인스턴스에 대한 내용과 표기법 3. 엔터티의 특징  업무에서 필요로 하는 정보 식별이 가능해야 함 두 개 이상의 인스턴스의 집합 업무프로세스에 의해 이용 속성을 포함  주식별자만 존재하고 일반속성은 전혀 없는 경우도 적절한 엔터티가 아님 (관계엔터티 예외)  관계의 존재  관계 생략 가능한 경우(1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://Komeethecat.github.io/help/hugoisforlovers/" />
-<meta property="article:published_time" content="2014-04-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-04-02T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://Komeethecat.github.io/post/sqld/01/0101/02/" />
+<meta property="article:published_time" content="2019-04-03T22:14:58&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-03T22:14:58&#43;09:00"/>
 
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -48,107 +43,104 @@ Follow the following steps:
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Getting Started with Hugo</h1>
+			<h1 class="post__title">엔터티</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2014-04-02T00:00:00">April 02, 2014</time>
+	<time class="meta__text" datetime="2019-04-03T22:14:58">April 03, 2019</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/help" rel="category">help</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/sqld" rel="category">SQLD</a></span>
 </div>
 </div>
 		</header><div class="content post__content clearfix">
 			
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
+<!--# 데이터 모델링의 이해
+## 엔터티 -->
 
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
-appropriate version for your OS and architecture.</p>
+<h3 id="1-엔터티의-개념">1. 엔터티의 개념</h3>
 
-<p>Save it somewhere specific as we will be using it in the next step.</p>
+<ul>
+<li>엔터티는 사람, 장소, 물건, 사건, 개념 등의 명사에 해당한다.</li>
+<li>엔터티는 업무상 관리가 필요한 관심사에 해당한다.</li>
+<li>엔터티는 저장이 되기 위한 어떤 것이다.</li>
+</ul>
 
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
+<h3 id="2-엔터티와-인스턴스에-대한-내용과-표기법">2. 엔터티와 인스턴스에 대한 내용과 표기법</h3>
 
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
+<p><img src="http://www.dbguide.net/publishing/img/knowledge/SQL_023.jpg" alt="엔터티와 인스턴스" /></p>
 
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
+<p><img src="http://www.dbguide.net/publishing/img/knowledge/SQL_024.jpg" alt="엔터티 표기법" /></p>
 
-<p>Follow the following steps:</p>
+<h3 id="3-엔터티의-특징">3. 엔터티의 특징</h3>
 
-<ol>
-<li>Clone the <a href="https://github.com/spf13/hugo">Hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
+<ul>
+<li>업무에서 필요로 하는 정보</li>
+<li>식별이 가능해야 함</li>
+<li>두 개 이상의 인스턴스의 집합</li>
+<li>업무프로세스에 의해 이용</li>
+<li>속성을 포함
 
-<p>Corresponding pseudo commands:</p>
+<ul>
+<li>주식별자만 존재하고 일반속성은 전혀 없는 경우도 적절한 엔터티가 아님 (관계엔터티 예외)</li>
+</ul></li>
+<li>관계의 존재
 
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
+<ul>
+<li>관계 생략 가능한 경우(1.통계를 위한, 2.(공통)코드를 위한, 3. 시스템 처리시 내부 필요한 의한(ex.로그 테이블))</li>
+</ul></li>
+</ul>
 
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+<h3 id="4-엔터티의-분류">4. 엔터티의 분류</h3>
 
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
+<ul>
+  <li> 유무(有無)형에 따른 분류
+    <ul>
+      <li> 유형 (사원, 물품, 강사) </li>
+        <li> 개념 (조직, 보험상품) </li>
+        <li> 사건 (주문,청구,미납) </li>
+    </ul>
+  </li>
 
-<p>Stop the Hugo process by hitting Ctrl+C.</p>
+  <li> 발생시점에 따른 분류
+      <ul>
+      <li> 기본/키엔터티 : 그 업무에 원래 존재하는 정보 (사원, 부서) </li>
+        <li> 중심엔터티 : 기본엔터티로부터 발생, 중심적인 역할 (접수, 계약) </li>
+        <li> 행위엔터티 : 두 개 이상의 부모엔터티로부터 발생, 자주 변경, 데이터량증가 (주문내역, 계약진행) </li>
+    </ul>
+  </li>
 
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+  <li> 스스로 생성될 수 있는지 여부
+    <ul>
+      <li> 독립엔터티 </li>
+      <li> 의존엔터티 </li>
+    </ul>
+  </li>
+</ul>
 
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
+<h3 id="5-엔터티의-명명">5. 엔터티의 명명</h3>
 
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+<ul>
+<li>현업업무에서 사용하는 용어</li>
+<li>약어사용 X</li>
+<li>단수명사 사용</li>
+<li>모든 엔터티에서 유일하게 이름을 부여</li>
+<li>엔터티 생성의미대로 이름을 부여</li>
+</ul>
 
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a></p>
+</blockquote>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/go/" rel="tag">go</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/golang/" rel="tag">golang</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">hugo</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/development/" rel="tag">development</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/sqld/" rel="tag">SQLD</a></li>
 	</ul>
 </div>
 	</article>
@@ -157,10 +149,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/help/migrate-from-jekyll/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Migrate to Hugo from Jekyll</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/help/goisforlovers/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">(Hu)go Template Primer</p></a>
+		<a class="post-nav__link" href="/post/sqld/01/0101/01/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">데이터모델의 이해</p></a>
 	</div>
 </nav>
 
