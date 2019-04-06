@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko-kr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>속성 - Komeethecat</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta name="generator" content="Hugo 0.54.0" />
+	<meta property="og:title" content="속성" />
+<meta property="og:description" content="데이터 모델링의 이해 속성 1. 속성(Attribute)의 개념  업무에서 필요로 한다. 의미상 더 이상 분리되지 않는다. 엔티티를 설명하고 인스턴스의 구성요소가 된다.  2. 엔터티, 인스턴스와 속성, 속성값에 대한 내용과 표기법 가. 엔터티, 인스턴스, 속성, 속성값의 관계
+ 한 개의 엔터티는 두 개 이상의 인스턴스의 집합이어야 한다. 한 개의 엔터티는 두 개 이상의 속성을 갖는다. 한 개의 속성은 한 개의 속성값을 갖는다.  나. 속성의 표기법
+3. 속성의 특징  엔터티와 마찬가지로 반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Komeethecat.github.io/post/sqld/01/0101/03/" />
+<meta property="article:published_time" content="2019-04-06T12:45:34&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-06T12:45:34&#43;09:00"/>
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Komeethecat" rel="home">
+				<div class="logo__title">Komeethecat</div>
+				<div class="logo__tagline">꼬미야 그만 자고 나랑 놀아줘</div>
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">속성</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-06T12:45:34">April 06, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/sqld" rel="category">SQLD&#34;</a></span>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			
+
+<h1 id="데이터-모델링의-이해">데이터 모델링의 이해</h1>
+
+<h2 id="속성">속성</h2>
+
+<h3 id="1-속성-attribute-의-개념">1. 속성(Attribute)의 개념</h3>
+
+<ul>
+<li>업무에서 필요로 한다.</li>
+<li>의미상 더 이상 분리되지 않는다.</li>
+<li>엔티티를 설명하고 인스턴스의 구성요소가 된다.</li>
+</ul>
+
+<h3 id="2-엔터티-인스턴스와-속성-속성값에-대한-내용과-표기법">2. 엔터티, 인스턴스와 속성, 속성값에 대한 내용과 표기법</h3>
+
+<p>가. 엔터티, 인스턴스, 속성, 속성값의 관계</p>
+
+<ul>
+<li>한 개의 엔터티는 두 개 이상의 인스턴스의 집합이어야 한다.</li>
+<li>한 개의 엔터티는 두 개 이상의 속성을 갖는다.</li>
+<li>한 개의 속성은 한 개의 속성값을 갖는다.</li>
+</ul>
+
+<p><img src="http://www.dbguide.net/publishing/img/knowledge/SQL_033.jpg" alt="엔티티-속성의 관계" /></p>
+
+<p>나. 속성의 표기법</p>
+
+<p><img src="http://www.dbguide.net/publishing/img/knowledge/SQL_034.jpg" alt="속성의 표기법" /></p>
+
+<h3 id="3-속성의-특징">3. 속성의 특징</h3>
+
+<ul>
+<li>엔터티와 마찬가지로 반드시 해당 업무에서 필요하고 관리하고자 하는 정보여야 한다.</li>
+<li>주식별자에 함수적 종속성을 가져야 한다.</li>
+<li>하나의 속성은 한 개의 값만을 가진다. 다중값일 경우 별도의 엔터티를 이용하여 분리한다.</li>
+</ul>
+
+<h3 id="4-속성의-분류">4. 속성의 분류</h3>
+
+<p>가. 속성의 특성에 따른 분류</p>
+
+<ol>
+  <li> 기본속성 (Basic Attribute)
+    <ul>
+      <li> 업무로부터 추출한 모든 속성 </li>
+      <li> ex) 제품이름, 제조년월, 제조원가 </li>
+    </ul>
+  </li>
+  <li> 설계속성 (Designed Attribute)
+    <ul>
+      <li> 원래 업무상 존재하지는 않지만 설계를 하면서 도출해내는 속성 </li>
+      <li> 코드성 속성 - 원래 속성을 업무상 필요에 의해 변형 </li>
+      <li> 일련번호 - 단일(Unique)한 식별자를 부여하기 위해 모델 상에서 새로 정의 </li>
+      <li> ex) 주문번호, 자재번호 </li>
+    </ul>
+  </li>
+  <li> 파생속성 (Derived Attribute)
+    <ul>
+      <li> 다른 속성으로부터 계산이나 변형이 되어 생성 </li>
+      <li> 통계관련 엔터티나 배치 작업이 수행되면서 발생되는 엔터티의 경우 많이 이용됨 </li>
+      <li> ex) 순매출액, 위수탁수수료 </li>
+    </ul>
+  </li>
+</ol>
+
+<p>나. 엔터티 구성방식에 따른 분류</p>
+
+<ul>
+<li>PK(Primary Key) 속성 : 엔터티를 식별할 수 있는 속성</li>
+<li>FK(Foreign Key) 속성 : 다른 엔터티와의 관계에서 포함된 속성</li>
+<li>일반속성 : 엔터티에 포함되어 있고 PK, FK에 포함되지 않은 속성</li>
+<li>세부 의미 분리 가능 여부
+
+<ul>
+<li>복합 속성 (Composite Attribute) : 주소</li>
+<li>단순 속성 (Simple Attribute) : 나이, 성별</li>
+</ul></li>
+<li>속성값의 개수가 2개 이상
+
+<ul>
+<li>다중값 속성 (Multi-Valued Attribute) : 1차 정규화 하거나 별도의 엔터티를 만들어 관계로 연결</li>
+</ul></li>
+</ul>
+
+<h3 id="5-도메인-domain">5. 도메인 (Domain)</h3>
+
+<ul>
+<li>엔터티 내에서 속성에 대한 데이터타입, 크기, 제약사항을 지정하는 것</li>
+<li>가질 수 있는 값의 범위</li>
+</ul>
+
+<h3 id="6-속성의-명명-naming">6. 속성의 명명 (Naming)</h3>
+
+<ol>
+<li>해당업무에서 사용하는 이름 이용</li>
+<li>서술식 속성명은 사용하지 않음 (명사형 사용) (소유격도 안됨)</li>
+<li>약어사용 가급적 제한</li>
+<li>전체 데이터모델에서 유일성을 확보하는 것이 좋다.
+
+<ul>
+<li>데이터에 대한 흐름을 파악하고 데이터와 정합성을 유지하는데 큰 도움이 된다.</li>
+<li>반정규화를 적용할 때 속성명의 충돌을 방지하여 반정규화를 적용할 수 있게 된다.</li>
+</ul></li>
+</ol>
+
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/sqld/" rel="tag">SQLD</a></li>
+	</ul>
+</div>
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/sqld/01/0101/02/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">엔터티</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://Komeethecat.github.io" />
+	</form>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/help">Help</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/sqld">Sqld</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/development" title="Development">Development</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/go" title="Go">Go</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqld" title="Sqld">Sqld</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/templates" title="Templates">Templates</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/themes" title="Themes">Themes</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Komeethecat.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>
